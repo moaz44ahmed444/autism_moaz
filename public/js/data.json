@@ -1,0 +1,236 @@
+{
+    "works" : [
+        {
+            "id" : 1,
+            "icon_name": "icon fa fa-chain fa-2x",
+            "title": "Mobile Ux",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos omnis voluptas ea ipsam! Voluptas."
+        },
+        {
+            "id" : 2,
+            "icon_name": "icon fa fa-bolt fa-2x",
+            "title": "Mobile Ux",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos omnis voluptas ea ipsam! Voluptas."
+        },
+        {
+            "id" : 3,
+            "icon_name": "icon fa fa-tachometer fa-2x",
+            "title": "Mobile Ux",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos omnis voluptas ea ipsam! Voluptas."
+        }
+  
+    ],
+
+    "treatments" : [
+        {
+            "id" : 1,
+            "demo": "https://www.brproud.com/wp-content/uploads/sites/80/2022/10/autism-in-girls-smiling-kid.jpg?w=876&h=493&crop=1",
+            "title": "Differences between concepts",
+            "body": "Two boxes (big one and small one) both can be opened and closed by a single click, multiple objects with different sizes. u can put the small objects in the small box and the big objects in the big box if the kid tried to put the objects in the wrong box or in a closed box a hint should appear with the right event —-> same concept with long / short A table with some objects some of them are under the table and some are above it, the child should match the objects with their fading ones ."
+        },
+        {
+            "id" : 2,
+            "demo": "https://raisingchildren.net.au/__data/assets/image/0024/47616/autism-spectrum-disorder-early-signs.jpg",
+            "title": "Matching & Classifying",
+            "body": "(Matching / classifying) Matching: match a picture with a picture Match a picture with a black and white picture Match a picture with its shadow Classifying : put the object with its matching group from different shapes or colors or spices ."
+        },
+        {
+            "id" : 3,
+            "demo": "https://www.aap.org/contentassets/a5857247f7dd48a0814388a6bd75d809/autistic-child-playing-with-blocks-focused.jpg",
+            "title": "Tools And Their Place",
+            "body": "A game containing different backgrounds with different places ( bathroom , living room , kitchen, school) and some different objects that clearly can be used in these places and the child should match the tool with its place Level one : all objects from the same place and there is a shadow to match the objects with Level two : mix objects from two different places."
+        },
+        {
+            "id" : 4,
+            "demo": "https://www.achievebeyondusa.com/wp-content/uploads/2022/03/what-are-the-different-types-of-autism_1200.jpg.webp",
+            "title": "Emotions ",
+            "body": "Matching picture with picture / matching emoji with emoji Matching picture with black and white picture Matching picture with emoji → try to mimic the emoji through video cam with a timer ."
+        }
+    ],
+
+    "portfolio" : [
+        {
+            "id":1,
+            "image": "https://www.brproud.com/wp-content/uploads/sites/80/2022/10/autism-in-girls-smiling-kid.jpg?w=876&h=493&crop=1"
+        },
+        {
+            "id":2,
+            "image": "https://www.aap.org/contentassets/a5857247f7dd48a0814388a6bd75d809/autistic-child-playing-with-blocks-focused.jpg"
+        },
+        {
+            "id":3,
+            "image": "https://raisingchildren.net.au/__data/assets/image/0024/47616/autism-spectrum-disorder-early-signs.jpg"
+        },
+        {
+            "id":4,
+            "image": "https://www.achievebeyondusa.com/wp-content/uploads/2022/03/what-are-the-different-types-of-autism_1200.jpg.webp"
+        },
+        {
+            "id":5,
+            "image": "https://images.ctfassets.net/zvaujq68yh0h/3U9nFmNsFimUceWYs0Eicc/85c8db95858d6b60fb97064a11736499/1-min.jpg?w=680&h=453&q=50&fm=webp"
+        },
+        {
+            "id":6,
+            "image": "https://www.mayoclinichealthsystem.org/-/media/national-files/images/hometown-health/2021/playing-with-toy-cars-and-trucks.jpg?h=370&w=660&la=en&hash=38E2F025E3A905B9C5CE1949DF08EE06"
+
+        },
+        {
+            "id":7,
+            "image": "https://live-production.wcms.abc-cdn.net.au/e2ff7553036a69a5b2ada1ebf4f5dd40?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=282&width=862&height=485"
+
+        },
+        {
+            "id":8,
+            "image": "https://www.nurturepods.com/wp-content/uploads/2019/12/educational-toys1.jpg"
+        }
+    ] ,
+    "social" : [
+        {
+            "id": 1,
+            "icon" : "icon fa fa-facebook fa-lg",
+            "title" : "Follow Me on",
+            "body" : "Social Facebook"
+        },
+        {
+            "id": 2,
+            "icon" : "icon fa fa-twitter fa-lg",
+            "title" : "Tweet Me on",
+            "body" : "Social twitter"
+        },
+        {
+            "id": 3,
+            "icon" : "icon fa fa-pinterest fa-lg",
+            "title" : "Pin Me on",
+            "body" : "Social Pinterest"
+        }
+    ] ,
+
+    "questions" : [
+        {
+            "id": 1,
+            "question": "I often notice small sounds when others do not",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },
+        {
+            "id": 2,
+            "question": "I usually concentrate more on the whole picture, rather than the small details",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },
+        {
+            "id": 3,
+            "question": "I find it easy to do more than one thing at once",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },
+        {
+            "id": 4,
+            "question": "If there is an interruption, I can switch back to what I was doing very quickly",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },
+        {
+            "id": 5,
+            "question": "I find it easy to read between the lines when someone is talking to me",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        }, {
+            "id": 6,
+            "question": "I know how to tell if someone listening to me is getting bored",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },
+        {
+            "id": 7,
+            "question": "When I’m reading a story, I find it difficult to work out the character’s intentions",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        }, {
+            "id": 8,
+            "question": "I like to collect information about categories of things (e.g. types of cars, types of bird, types of train, types of plant, etc)",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },
+        {
+            "id": 9,
+            "question": "I find it easy to work out what someone is thinking or feeling just by looking at their face",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        }, {
+            "id": 10,
+            "question": "I find it difficult to work out people’s intentions",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },{
+            "id": 11,
+            
+            "question": "Born with jaundice ( Whether the case was born with jaundice)",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },
+        {
+            "id": 12,
+            
+            "question": "Family member with ASD ( Whether any immediate family member has a PDD )",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },
+        {
+            "id": 13,
+            
+            "question": "Used the screening app before ( Whether the user has used a screening app)",
+            "options": [
+                { "id": 1, "text": "Yes" },
+                { "id": 2, "text": "No" }
+              ]
+        },{
+            "id": 14,
+            "question": "Gender ( Male or Female ) ",
+            "options": [
+                { "id": 1, "text": "Male" },
+                { "id": 2, "text": "Female" }
+              ]
+        }
+
+       
+    ],
+
+    "Profiles" : [
+        {
+            "id": 1,
+            "Image": "https://scontent.fcai20-2.fna.fbcdn.net/v/t39.30808-6/326116994_856257765481786_6782051544370705156_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=VG4xMtocxB0AX9oU5Ja&_nc_ht=scontent.fcai20-2.fna&oh=00_AfBvfqvtlZUzqez-C4qvLNrgrTpoQw66rLQ2Hy00quku0g&oe=645D1708",
+            "FirstName": "Moaz",
+            "LastName": "Ahmed",
+            "Specialty": "Web Developer",
+            "Email": "Moaz44Ahmed444@gmail.com",
+            "Phone": "0109730251",
+            "About": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel bibendum bibendum, elit elit bibendum."
+        }
+    ]
+}
+
