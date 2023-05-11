@@ -37,8 +37,10 @@ const Questionnaire = () => {
         <legend>Questions</legend>
      
         <Container>
+        {questionItem.id <15 ?(
           <div key={questionItem.id}>
             <Question>{questionItem.question}</Question>
+            
             {questionItem.options.map((o) => (
               <AnswerOption key={o.id}>
                 <RadioInput
@@ -49,12 +51,26 @@ const Questionnaire = () => {
                     answers.find((a) => a.questionId === questionItem.id)?.optionId === o.id
                   }
                   onChange={() => handleAnswerChange(questionItem.id, o.id)}
+                  required
                 />
                 <Span>{o.text}</Span>
                 
               </AnswerOption>
             ))}
           </div>
+         ) : (
+          <div key={questionItem.id}>
+          <Question>{questionItem.question}</Question>
+            <AnswerOption>
+              <RadioInput
+                type={questionItem.type}
+                name={`question-${questionItem.id}`}
+                onChange={(e) => handleAnswerChange(questionItem.id, e.target.value)}
+                required 
+              />              
+            </AnswerOption>
+        </div>
+         )}
       </Container>
           
         </fieldset>

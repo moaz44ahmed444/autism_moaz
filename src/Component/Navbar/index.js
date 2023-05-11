@@ -3,7 +3,7 @@ import React , { useState }from "react";
 import { NavbarSection,Logo,LogoText,UlList,ListItem,Anchor, LinkItem } from "./Style.js"
 const Navbar = () => {
 
-  const [signedIn, setSignedIn] = useState(true);
+  const [signedIn, setSignedIn] = useState();
 
   return (
     <NavbarSection>

@@ -216,7 +216,7 @@ export const RadioInput = styled.input`
 }
 &:hover{
     color:  #669999;
-    border: 8px solid  #669999;
+    border: 2px solid  #669999;
 }
 `;
 

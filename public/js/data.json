@@ -215,6 +215,26 @@
                 { "id": 1, "text": "Male" },
                 { "id": 2, "text": "Female" }
               ]
+        },{
+            "id": 15,
+            "question": "Age ( Age in years 3-8 ) ",
+            "type": "number"
+        },{
+            "id": 16,
+            "question": "Ethnicity ( List of common ethnicities in text format ) ",
+            "type": "text"
+        },{
+            "id": 17,
+            "question": "Language ( what is your language ) ",
+            "type": "text"
+        },{
+            "id": 18,
+            "question": "Who is completing the test ( Parent, self, caregiver, medical staff, clinician, etc. ) ",
+            "type": "text"
+        },{
+            "id": 19,
+            "question": "Country of residence ( List of countries in text format ) ",
+            "type": "text"
         }
 
        
