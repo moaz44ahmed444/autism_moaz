@@ -7,7 +7,9 @@ import MyAccount from "./Component/MyAccount";
 import Questionnaire from "./Component/Questionnaire";
 import Treatments from "./Component/Treatments";
 import Game from "./Component/Treatments/Game"
-
+import SpecialistSignUpForm from "./Component/Login/SpecialistSignUpForm";
+import ParentSignUpForm from "./Component/Login/ParentSignUpForm";
+import PatientSignUpForm from "./Component/Login/PatientSignUpForm";
 import { BrowserRouter , Route , Routes } from 'react-router-dom';
 
 const App = () => {
@@ -20,11 +22,15 @@ const App = () => {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/Questionnaire' element={<Questionnaire/>} />
         <Route path='/Login' element={<Login/>} />
+        <Route path='/SpecialistSignUpForm' element={<SpecialistSignUpForm/>} />
+        <Route path='/ParentSignUpForm' element={<ParentSignUpForm/>} />
+        <Route path='/PatientSignUpForm' element={<PatientSignUpForm/>} />
         <Route path='/MyAccount' element={<MyAccount userId={userId}/>} />
         <Route path='/Treatments' element={<Treatments/>} />
         <Route path='/Game1' element={<Game index={1}/>} />
         <Route path='/Game2' element={<Game index={2}/>} />
         <Route path='/Game3' element={<Game index={3}/>} />
+        
       </Routes>
     </BrowserRouter>
   );

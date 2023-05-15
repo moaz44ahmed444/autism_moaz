@@ -1,13 +1,78 @@
 
 import React, { useState } from "react";
 import axios from 'axios';
-import { Container , Form ,  Title , Input , Button , SwitchMode , SwitchModeButton , SignUpText , DropdownContainer , DropdownButton , DropdownContent , DropdownItem , DrowDIV , Label  } from './Style.js'
+import { Container , Form ,  Title , Input , Button , DropdownLink , DropdownContainer , DropdownButton , DropdownContent , TriangleRight  } from './Style.js'
+import Footer from "../Footer/index.js";
+
+const options = [
+  { label: 'Specialist', link: '/SpecialistSignUpForm' },
+  { label: 'Parent', link: '/ParentSignUpForm' },
+  { label: 'Patient', link: '/PatientSignUpForm' },
+];
+
+
 
 const Login = () => {
 
   const [signedIn, setSignedIn] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const SpecialistSignUpForm = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSignIn = async (e) => {
+      e.preventDefault();
+      try {
+        const response = await axios.post('http://localhost:8000/api/signin/', {
+        email,
+        password,
+      });
+      console.log(response.data);
+      setSignedIn(true);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+
+  return (
+    <>
+    <Container>
+      <TriangleRight></TriangleRight>
+      <Form onSubmit={handleSignIn}>
+        <Title>Sign In</Title>
+        <Input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+        <Input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+        <div>
+        <Button type="submit">Sign In</Button>
+        <DropdownContainer>
+        <DropdownButton onClick={toggleDropdown}>Create new account</DropdownButton>
+          <DropdownContent isOpen={isOpen}>
+            {options.map(({ label, link }) => (
+              <DropdownLink key={label} to={link}>
+                {label}
+              </DropdownLink>
+          ))}
+          </DropdownContent>
+        </DropdownContainer>
+        </div>
+      </Form>
+    </Container>
+    <Footer />
+    </>
+  );
+};
+ 
+
+
+export default Login;
+
+/**
+ * const SpecialistSignUpForm = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -157,7 +222,7 @@ const Login = () => {
     );
   };
 
-const SignUpDropdown = () => {
+  const SignUpDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
 
@@ -169,13 +234,13 @@ const SignUpDropdown = () => {
   let SignUpFormComponent = null;
   switch(selectedType){
     case 'Specialist':
-      SignUpFormComponent = SpecialistSignUpForm;
+      SignUpFormComponent = <SpecialistSignUpForm/>;
       break;
     case 'Patient':
-      SignUpFormComponent = PatientSignUpForm;
+      SignUpFormComponent = <PatientSignUpForm/>;
       break;
     case 'Parent':
-      SignUpFormComponent = ParentSignUpForm;
+      SignUpFormComponent = <ParentSignUpForm/>;
       break;
     default:
       SignUpFormComponent = null;
@@ -184,7 +249,7 @@ const SignUpDropdown = () => {
 
   return (
     
-    <DropdownContainer>
+    <>
       <DropdownButton onClick={() => setIsOpen(!isOpen)}>
         {selectedType ? `Sign up as a ${selectedType}` : 'Sign up as...'}
       </DropdownButton>
@@ -194,77 +259,14 @@ const SignUpDropdown = () => {
         <DropdownItem onClick={() => handleItemClick('Parent')}>Parent</DropdownItem>
       </DropdownContent>
       {SignUpFormComponent && <SignUpFormComponent />}
-    </DropdownContainer>
+    </>
 
   );
 };
 
 
-const SignInForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+ */
 
-  const handleSignIn = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:8000/api/signin/', {
-      email,
-      password,
-    });
-    console.log(response.data);
-    setSignedIn(true);
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-  return (
-    <Form onSubmit={handleSignIn}>
-      <Title>Sign In</Title>
-      <Input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-      <Input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-      <Button type="submit">Sign In</Button>
-
-      <SwitchMode>
-          {!signedIn ? "Don't have an account?" : 'Already have an account?'}
-          <SwitchModeButton type="button" onClick={() => setSignedIn(!signedIn)}>
-            {!signedIn ? 'Sign Up' : 'Sign In'}
-          </SwitchModeButton>
-          </SwitchMode>
-          {signedIn && (
-            <SignUpText>By signing up, you agree to our Terms and Privacy Policy.</SignUpText>
-          )}
-    </Form>
-  );
-};
-
-  return (
-    <Container>
-      {signedIn ? (
-        <DrowDIV >
-          <Title>Sign Up</Title>
-          <SignUpDropdown />
-          <SwitchMode>
-          {!signedIn ? "Don't have an account?" : 'Already have an account?'}
-          <SwitchModeButton type="button" onClick={() => setSignedIn(!signedIn)}>
-            {!signedIn ? 'Sign Up' : 'Sign In'}
-          </SwitchModeButton>
-          </SwitchMode>
-          {signedIn && (
-            <SignUpText>By signing up, you agree to our Terms and Privacy Policy.</SignUpText>
-          )}
-        </DrowDIV>
-      ) : (
-           <SignInForm/>
-      )}
-     
-    </Container>
-  );
-};
- 
-
-
-export default Login;
 /*
 
 

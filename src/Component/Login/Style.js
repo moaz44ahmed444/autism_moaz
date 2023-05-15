@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 
 export const Container = styled.div`
@@ -6,22 +7,18 @@ export const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 150vh;
-	background-image: url("https://www.spectrumnews.org/wp-content/uploads/2015/11/20151201WhatIsAutism-844-2.jpg");
-	background-size: cover;
-    background-attachment: fixed
+	padding-bottom: 5%;
 
 `;
 
 export const Form = styled.form`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	background-color: #fff;
 	padding: 30px;
 	border-radius: 10px;
 	box-shadow: 0px 0px  rgba(0, 0, 0, 0.1);
-	width: 400px;
+	width: 40%;
 `;
 
 export const Title = styled.h1`
@@ -33,77 +30,68 @@ export const Title = styled.h1`
 
 export const Input = styled.input`
 	padding: 10px;
-	border-radius: 5px;
-	border: none;
 	margin-bottom: 20px;
 	width: 100%;
 	font-size: 16px;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+	border : none;
+	border-bottom: 3px solid black;
+	
 
+`;
+
+export const Label = styled.label`
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.64);
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 1.5%;
 `;
 
 export const Button = styled.button`
-	padding: 10px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	width: 30%;
+	height: 8%;
+	padding: 20px;
 	border-radius: 5px;
 	border: none;
-	background-color: #1e90ff;
+	background-color: rgba(20, 60, 225, 0.74);
 	color: #fff;
 	cursor: pointer;
 	transition: background-color 0.2s ease-in-out;
-	width: 100%;
 	font-size: 16px;
-
+	display: inline-block;
 	&:hover {
-	background-color: #00bfff;
+		background: rgba(50, 70, 225, 0.74);
 	}
-`;
-
-export const SwitchMode = styled.p`
-	font-size: 14px;
-	margin-bottom: 0;
-	color: #000;
-`;
-
-export const SwitchModeButton = styled.button`
-	font-size: 14px;
-	margin-left: 5px;
-	color: #0077cc;
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	transition: color 0.2s ease-in-out;
-
-	&:hover {
-	color: #00bfff;
-	}
-`;
-
-export const SignUpText = styled.p`
-	font-size: 14px;
-	margin-top: 20px;
-`;
+`; 
 
 export const DropdownContainer = styled.div`
   position: relative;
-  margin-bottom: 0%;
+  left: 10%;
+  width:60%;
+  display: inline-block;
+  ;
 `;
 
 export const DropdownButton = styled.button`
-	padding: 10px;
-	border-radius: 5px;
+	width: 100%;
+	height: 8%;
+	padding: 20px;
 	border: none;
-	background-color: #1e90ff;
+	background-color: rgba(20, 60, 225, 0.74);
 	color: #fff;
 	cursor: pointer;
 	transition: background-color 0.2s ease-in-out;
-	width: 90%;
 	font-size: 16px;
-	margin-left: 5%;
-	margin-right: 5%;
-	align-items: center;
-	
+	border-radius: 5px;
+
 	&:hover {
-	background-color: #00bfff;
+		background: rgba(50, 70, 225, 0.74);
 	}
 	`;
 
@@ -111,12 +99,49 @@ export const DropdownContent = styled.div`
   display: ${props => (props.isOpen ? 'block' : 'none')};
   position: absolute;
   z-index: 1;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
+  left: 0%;
+  padding: 12px 16px 12px 16px;
+  width: 70%;
 `;
 
+
+export const DropdownLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  margin: 5%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+  height: 10px;
+  padding: 15px;
+  background-color: rgba(100, 50, 225, 0.59);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 16px;
+  border-radius: 7px;
+
+  &:hover {
+	background: rgba(120, 70, 225, 0.94);
+  }
+`;
+
+export const TriangleRight = styled.div`
+position: absolute;
+width: 445px;
+height: 572px;
+left: -438px;
+top: 7%;
+
+background: #885FFF;
+transform: rotate(-50deg);
+
+`
+
+/*
 export const DropdownItem = styled.a`
   color: black;
   padding: 12px 16px;
@@ -140,9 +165,56 @@ export const DrowDIV = styled.div`
 	padding-top: 10px;
 `;
 
-export const Label = styled.label`
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-  text-align: left;
+
+
+export const Button = styled.button`
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 10px;
+
+position: absolute;
+width: 228px;
+height: 95px;
+left: 693px;
+top: 665px;
+
+background: rgba(27, 70, 225, 0.74);
+border-radius: 15px;
+`;*/
+/**
+export const SwitchMode = styled.p`
+	font-size: 14px;
+	margin-bottom: 0;
+	color: #000;
 `;
+
+export const SwitchModeButton = styled.button`
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+width: 50%;
+height: 8%;
+right: 100%;
+padding: 20px;
+border-radius: 5px;
+border: none;
+background-color: #1e90ff;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out;
+font-size: 16px;
+border-radius: 15px;
+
+&:hover {
+	background: rgba(27, 70, 225, 0.74);
+}
+`;
+
+export const SignUpText = styled.p`
+	font-size: 14px;
+	margin-top: 20px;
+`; */

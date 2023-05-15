@@ -9,10 +9,17 @@ export const NavbarSection = styled.div`
     position: relative;
     border-bottom: 1px solid #000
 `
-
 export const Logo = styled.div`
     width: 50%;
     float: left;
+   display:flex;
+`
+export const LogoImg =styled.img`
+
+border-radius:200px;
+width:80px;
+height:45px;
+margin-top:5%;
 `
 
 export const LogoText = styled.h2`

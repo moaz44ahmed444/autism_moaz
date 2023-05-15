@@ -1,6 +1,6 @@
 import React , { useState }from "react";
 
-import { NavbarSection,Logo,LogoText,UlList,ListItem,Anchor, LinkItem } from "./Style.js"
+import { NavbarSection,Logo,LogoText,UlList,ListItem,Anchor, LinkItem, LogoImg } from "./Style.js"
 const Navbar = () => {
 
   const [signedIn, setSignedIn] = useState();
@@ -11,7 +11,8 @@ const Navbar = () => {
     <div className="container">
         
         <Logo>
-            <LogoText>Autism</LogoText>
+        <LogoImg src="https://i.pinimg.com/564x/20/04/0d/20040d115d0bcc53a9f15cea8e3d4744.jpg" alt="react"/>
+          <LogoText>Autism</LogoText>
         </Logo>
         
        
