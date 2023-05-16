@@ -1,12 +1,14 @@
 
 import React, { useState } from "react";
 import axios from 'axios';
-import { Container , Form ,  Title , Input , Button , SwitchMode , SwitchModeButton , SignUpText , DropdownContainer , DropdownButton , DropdownContent , DropdownItem , DrowDIV , Label , TriangleRight } from './Style.js'
+import { Container , Form ,  Title , Input , Button , FileInput , FileInputLabel , FormGroup , DropdownContainer , DropdownButton , ImagePreview , DropdownItem , DrowDIV , Label , TriangleRight } from './Style.js'
 import { Link } from "react-router-dom";
-import Footer from "../Footer/index.js";
+import styled from "styled-components";
 
-  const SpecialistSignUpForm = () => {
-    const [signedIn, setSignedIn] = useState(false);
+
+
+  const SpecialistSignUpForm = (props) => {
+    const { signedIn, setSignedIn } = props;
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -16,6 +18,7 @@ import Footer from "../Footer/index.js";
     const [dob, setDob] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [profileImage, setProfileImage] = useState('');
+    const [imagePreview, setImagePreview] = useState('');
     const [cv, setCv] = useState('');
   
     const handleSignUp = async (e) => {
@@ -35,10 +38,25 @@ import Footer from "../Footer/index.js";
         cv,
       });
       console.log(response.data);
-      setSignedIn(true);
+      setSignedIn(!signedIn);
     } catch (error) {
       console.error(error);
     }
+  };
+
+  
+  const handleProfileImagePreview = event => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setImagePreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setImagePreview('');
+    }
+    setProfileImage(file);
   };
 
     return (
@@ -55,10 +73,14 @@ import Footer from "../Footer/index.js";
         <Input type="text" placeholder="Specialty" value={specialty} onChange={e => setSpecialty(e.target.value)} />
         <Input type="date" placeholder="Date of Birth" value={dob} onChange={e => setDob(e.target.value)} />
         <Input type="tel" placeholder="Phone Number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
-        <Label>Choose Profile Image</Label>
-        <Input type="file" placeholder="Profile Image" onChange={e => setProfileImage(e.target.files[0])} />
-        <Label>Choose CV</Label>
-        <Input type="file" placeholder="CV" onChange={e => setCv(e.target.files[0])} />
+        <FormGroup>
+          <FileInputLabel htmlFor="profile-image">Choose Profile Image</FileInputLabel>
+          <FileInput id="profile-image" placeholder="Profile Image" type="file" onChange={handleProfileImagePreview} />
+          {imagePreview && <ImagePreview src={imagePreview} alt="Profile" />}
+        
+          <FileInputLabel htmlFor="cv">Choose CV</FileInputLabel>
+          <FileInput id="cv" placeholder="CV" type="file" onChange={e => setCv(e.target.files[0])} />
+        </FormGroup>
         <div>
         <Button type="submit">Sign Up</Button>
         <Link to={{pathname: "/Login" }} >
@@ -67,7 +89,6 @@ import Footer from "../Footer/index.js";
         </div>
         </Form>
       </Container>
-          <Footer />
     </>
 
     );

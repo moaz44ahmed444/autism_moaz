@@ -8,6 +8,7 @@ export const Container = styled.div`
 	align-items: center;
 	justify-content: center;
 	padding-bottom: 5%;
+	width:100%;
 
 `;
 
@@ -140,6 +141,47 @@ background: #885FFF;
 transform: rotate(-50deg);
 
 `
+
+export const FileInput = styled.input`
+  display: none;
+`;
+
+export const FileInputLabel = styled.label`
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 8%;
+  display: block;
+  text-align: center;
+  background-color: rgba(100, 50, 225, 0.59);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 16px;
+  border-radius: 7px;
+  width: 80%;
+  &:hover {
+	background: rgba(120, 70, 225, 0.94);
+  }
+`;
+
+export const FormGroup = styled.div`
+  width: 103%;
+  margin-bottom: 10%;
+  border-bottom: 3px solid black;
+`;
+export const ImagePreview = styled.img`
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 10px;
+  margin-left: 35%;
+  border-radius: 50%;
+
+`;
+
 
 /*
 export const DropdownItem = styled.a`

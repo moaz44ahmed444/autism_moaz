@@ -1,7 +1,7 @@
 import React ,  {useState , useEffect} from 'react';
-import { Container , ProfileHeader , ProfileImage , ProfileInfo , ProfileContent , ProfileSection , SectionTitle , SectionContent , SkillList , SkillItem , ExperienceList , ExperienceItem , ExperienceTitle , ExperienceCompany , ExperienceDate } from './Style';
+import { Container , ProfileHeader , ProfileImage , ProfileInfo , ProfileContent , ProfileSection , SectionTitle , SectionContent , SkillList , SkillItem , ExperienceList , ExperienceItem , ExperienceTitle , ExperienceCompany , ExperienceDate , Button} from './Style';
 import axios from "axios";
-
+import { Link } from 'react-router-dom';
 const MyAccount = () => {
 
   const [ Profiles , setProfiles ] = useState([])
@@ -26,6 +26,11 @@ const MyAccount = () => {
             <SectionContent>
               <p>{profileItem.About}.</p>
               <p>{profileItem.Phone}</p>
+            </SectionContent>
+            <SectionContent>
+            <Link to={{pathname: "/EditProfile" }} >
+              <Button Button>Edit Profile</Button>
+            </Link>
             </SectionContent>
           </ProfileSection>
           <ProfileSection>

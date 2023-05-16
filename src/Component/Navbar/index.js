@@ -1,9 +1,9 @@
-import React , { useState }from "react";
+import React from "react";
 
 import { NavbarSection,Logo,LogoText,UlList,ListItem,Anchor, LinkItem, LogoImg } from "./Style.js"
-const Navbar = () => {
+const Navbar = (props) => {
 
-  const [signedIn, setSignedIn] = useState();
+  const { signedIn } = props;
 
   return (
     <NavbarSection>

@@ -44,6 +44,26 @@ export const ProfileInfo = styled.div`
   }
 `;
 
+export const Button = styled.button`
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	width: 30%;
+	height: 8%;
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #117110;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	font-size: 16px;
+	display: inline-block;
+	&:hover {
+		background: #10860F;
+	}
+`;  
+
 export const ProfileContent = styled.div`
   margin-top: 22%; 
   background-color: #f8f9fe;
