@@ -4,7 +4,9 @@ import Index from "./Component/Index";
 import Navbar from "./Component/Navbar";
 import Login from "./Component/Login";
 import MyAccount from "./Component/MyAccount";
-import EditProfile from "./Component/MyAccount/EditProfile"
+import EditSpecilaistProfile from "./Component/MyAccount/EditProfile/EditSpecialistProfile"
+import EditParentProfile from "./Component/MyAccount/EditProfile/EditParentProfile"
+import EditPatientProfile from "./Component/MyAccount/EditProfile/EditPatientProfile"
 import Questionnaire from "./Component/Questionnaire";
 import Treatments from "./Component/Treatments";
 import Game from "./Component/Treatments/Game"
@@ -32,7 +34,9 @@ const App = () => {
         <Route path='/ParentSignUpForm' element={<ParentSignUpForm signedIn={signedIn} setSignedIn={setSignedIn}/>} />
         <Route path='/PatientSignUpForm' element={<PatientSignUpForm signedIn={signedIn} setSignedIn={setSignedIn}/>} />
         <Route path='/MyAccount' element={<MyAccount userId={userId}/>} />
-        <Route path='/EditProfile' element={<EditProfile signedIn={signedIn}/>} />
+        <Route path='/EditSpecilaistProfile' element={<EditSpecilaistProfile/>} />
+        <Route path='/EditParentProfile' element={<EditParentProfile/>} />
+        <Route path='/EditPatientProfile' element={<EditPatientProfile/>} />
         <Route path='/Treatments' element={<Treatments/>} />
         <Route path='/Game1' element={<Game index={1}/>} />
         <Route path='/Game2' element={<Game index={2}/>} />

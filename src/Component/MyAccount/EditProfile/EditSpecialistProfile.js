@@ -18,7 +18,7 @@ const INITIAL_STATE = {
   profileImage: "",
 };
 
-const EditProfile = () => {
+const EditSpecialistProfile = () => {
 
   const [profileImage, setProfileImage] = useState('');
   const [imagePreview, setImagePreview] = useState('');
@@ -110,4 +110,4 @@ const EditProfile = () => {
     );
   };
 
-  export default EditProfile;
+  export default EditSpecialistProfile;

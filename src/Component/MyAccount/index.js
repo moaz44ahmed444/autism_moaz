@@ -28,7 +28,7 @@ const MyAccount = () => {
               <p>{profileItem.phoneNumber}</p>
             </SectionContent>
             <SectionContent>
-            <Link to={{pathname: "/EditProfile" }} >
+            <Link to={{pathname: "/EditSpecilaistProfile" }} >
               <Button Button>Edit Profile</Button>
             </Link>
             </SectionContent>
