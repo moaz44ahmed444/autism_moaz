@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FooterSection =styled.div` 
 text-align: center;
 background-color:#fcf7f1;
+width: 100%;
 
 `
 export const Logo =styled.img`
@@ -19,7 +20,7 @@ color:black
 `
 export const FooterDesc =styled.div` 
 bottom:0px;
-width:100%;
+width: 100%;
 background-color:rgba(0, 0, 0, 0.5);
 color:white;
 margin-top:2%;

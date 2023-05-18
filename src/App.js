@@ -17,7 +17,7 @@ import Footer from "./Component/Footer";
 
 
 const App = () => {
-  const [signedIn, setSignedIn] = useState();
+  const [signedIn, setSignedIn] = useState(true);
 
   const userId = '123'; // This could be the user's ID from the login page
   return (

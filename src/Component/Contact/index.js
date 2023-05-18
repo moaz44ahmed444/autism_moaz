@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../Footer/index.js";
 import {Drop ,Title ,Span ,FormSection,InputForm,InputText,InputEmail,InputExp,TextArea,InputSubmit,Icon, SpanIcon,Style} from'./Style.js'
 
 const Contact =()=> {
@@ -27,7 +26,6 @@ const Contact =()=> {
          </div>
     </Drop>
     <Style>
-     <Footer />
      </Style>
      </div>
     )

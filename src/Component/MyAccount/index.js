@@ -13,11 +13,11 @@ const MyAccount = () => {
     return(
       <Container  key={profileItem.id}>
         <ProfileHeader>
-          <ProfileImage src={profileItem.Image} alt="Profile Image" />
+          <ProfileImage src={profileItem.profileImage} alt="Profile Image" />
           <ProfileInfo>
-            <h1>{profileItem.FirstName} {profileItem.LastName}</h1>
-            <p>{profileItem.Specialty}</p>
-            <p>{profileItem.Email}</p>
+            <h1>{profileItem.firstName} {profileItem.lastName}</h1>
+            <p>{profileItem.specialty}</p>
+            <p>{profileItem.email}</p>
           </ProfileInfo>
         </ProfileHeader>
         <ProfileContent>
@@ -25,7 +25,7 @@ const MyAccount = () => {
             <SectionTitle>About Me</SectionTitle>
             <SectionContent>
               <p>{profileItem.About}.</p>
-              <p>{profileItem.Phone}</p>
+              <p>{profileItem.phoneNumber}</p>
             </SectionContent>
             <SectionContent>
             <Link to={{pathname: "/EditProfile" }} >

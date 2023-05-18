@@ -183,6 +183,15 @@ export const ImagePreview = styled.img`
 `;
 
 
+export const ProfileImage = styled.img`
+  width: 30%;
+  height: 40%;
+  margin-top: 10px;
+  margin-left: 35%;
+  border-radius: 50%;
+
+`;
+
 /*
 export const DropdownItem = styled.a`
   color: black;
