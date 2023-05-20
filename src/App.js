@@ -14,6 +14,7 @@ import SpecialistSignUpForm from "./Component/Login/SpecialistSignUpForm";
 import ParentSignUpForm from "./Component/Login/ParentSignUpForm";
 import PatientSignUpForm from "./Component/Login/PatientSignUpForm";
 import SpecialistAppointments from "./Component/MyAccount/AppointmentsHandling/SpecialistAppointments";
+import ParentAppointments from "./Component/MyAccount/AppointmentsHandling/ParentAppointments";
 import { BrowserRouter , Route , Routes } from 'react-router-dom';
 import Footer from "./Component/Footer";
 
@@ -39,6 +40,7 @@ const App = () => {
         <Route path='/EditParentProfile' element={<EditParentProfile/>} />
         <Route path='/EditPatientProfile' element={<EditPatientProfile/>} />
         <Route path='/SpecialistAppointments' element={<SpecialistAppointments/>} />
+        <Route path='/ParentAppointments' element={<ParentAppointments/>} />
         <Route path='/Treatments' element={<Treatments/>} />
         <Route path='/Game1' element={<Game index={1}/>} />
         <Route path='/Game2' element={<Game index={2}/>} />

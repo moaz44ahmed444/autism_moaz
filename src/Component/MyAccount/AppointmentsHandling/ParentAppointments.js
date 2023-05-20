@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {PageContainer , Title , AppointmentTable , TableHeader , TableRow , TableCell , Button } from "./Style.js"
+import {PageContainer , Title , AppointmentTable , TableHeader , TableRow , TableCell , Button , Approoved , Pending , DoctorImage, IDTableHeader , PictureTableHeader , Declined} from "./Style.js"
 
 
-const SpecialistAppointments = () => {
+const ParentAppointments = () => {
   const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {
@@ -39,26 +39,34 @@ const SpecialistAppointments = () => {
 
   return (
     <PageContainer>
-      <Title>Doctor Appointment Page</Title>
+      <Title>Parent Appointment Page</Title>
       <AppointmentTable>
         <thead>
           <tr>
-            <TableHeader>Patient Name</TableHeader>
+            <IDTableHeader  >ID</IDTableHeader>
+            <PictureTableHeader>Picture</PictureTableHeader>
+            <TableHeader>Doctor Name</TableHeader>
             <TableHeader>Date</TableHeader>
             <TableHeader>Time</TableHeader>
-            <TableHeader>Actions</TableHeader>
+            <TableHeader>Status</TableHeader>
           </tr>
         </thead>
         <tbody>
           {appointments.map((appointment) => (
             <TableRow key={appointment.id}>
+              <TableCell>{appointment.id}</TableCell>
+              <TableCell><DoctorImage src={appointment.profileImage} ></DoctorImage></TableCell>
               <TableCell>{appointment.firstName} {appointment.lastName}</TableCell>
               <TableCell>{appointment.dob}</TableCell>
               <TableCell>{appointment.time}</TableCell>
-              <TableCell>
-                <Button onClick={() => handleAccept(appointment.id)}>Accept</Button>
-                <Button onClick={() => handleDecline(appointment.id)}>Decline</Button>
-              </TableCell>
+              {appointment.status === "Approved" ? (
+                <Approoved>Approved</Approoved>
+              ) : appointment.status === "Declined" ? (
+                <Declined>Declined</Declined>
+              ) : (
+                <Pending>Pending</Pending>
+              )}
+              
             </TableRow>
           ))}
         </tbody>
@@ -67,5 +75,5 @@ const SpecialistAppointments = () => {
   );
 };
 
- 
- export default SpecialistAppointments
+
+export default ParentAppointments
