@@ -7,8 +7,7 @@ import styled from "styled-components";
 
 
 
-  const SpecialistSignUpForm = (props) => {
-    const { signedIn, setSignedIn } = props;
+  const SpecialistSignUpForm = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -38,7 +37,7 @@ import styled from "styled-components";
         cv,
       });
       console.log(response.data);
-      setSignedIn(!signedIn);
+      window.location.replace("http://localhost:3000/Login");
     } catch (error) {
       console.error(error);
     }

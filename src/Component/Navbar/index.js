@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { NavbarSection,Logo,LogoText,UlList,ListItem,Anchor, LinkItem, LogoImg } from "./Style.js"
-const Navbar = (props) => {
+import { NavLink } from "react-router-dom";
+const Navbar = () => {
 
-  const { signedIn } = props;
+  const [auth , setAuth] = useState(null) ; 
+
+  // For Access LocalStorage 
+  const getAuther = ()=>{
+    if(localStorage.getItem("user"))
+      {
+        setAuth(JSON.parse(localStorage.getItem("user")))
+       
+      }
+  }
+
+useEffect(()=>{
+  getAuther()
+} ,[])
+  
+    // For Logout 
+    const logoutHandler = ()=>{
+        localStorage.removeItem("user" ) ; 
+        window.location.replace("http://localhost:3000/Login")
+    }
 
   return (
     <NavbarSection>
@@ -22,16 +42,23 @@ const Navbar = (props) => {
             <ListItem><LinkItem to="/Questionnaire">Questionnaire</LinkItem></ListItem>
             <ListItem><LinkItem to="/Treatments">Treatments</LinkItem></ListItem>
             <ListItem><Anchor >About</Anchor></ListItem>
-            <ListItem><LinkItem to="/contact">Contact</LinkItem></ListItem>
-            {signedIn ? (
-            <>
-              <ListItem><LinkItem to="/MyAccount">My Account</LinkItem></ListItem>
-            </>
-          ) : (
-            <>
+            <ListItem><LinkItem to="/Contact">Contact</LinkItem></ListItem>
+            
+          {
+            !auth && (
               <ListItem><LinkItem to="/Login">Login</LinkItem></ListItem>
+ 
+            )
+          }
+          {
+            auth &&  (
+              <>
+              <ListItem><LinkItem to="/MyAccount">My Account</LinkItem></ListItem>
+              <ListItem><Anchor to="/login" onClick={logoutHandler} >Logout</Anchor></ListItem>
               </>
-          )}
+
+            )
+          }
 
         </UlList>
         

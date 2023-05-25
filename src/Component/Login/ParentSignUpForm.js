@@ -4,8 +4,7 @@ import axios from 'axios';
 import { Container , Form ,  Title , Input , Button , FileInput , FileInputLabel , FormGroup , DropdownContainer , DropdownButton , ImagePreview , DropdownItem , DrowDIV , Label , TriangleRight } from './Style.js'
 import { Link } from "react-router-dom";
 
-  const ParentSignUpForm = (props) => {
-    const { signedIn, setSignedIn } = props;
+  const ParentSignUpForm = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -31,7 +30,7 @@ import { Link } from "react-router-dom";
         profileImage,
       });
       console.log(response.data);
-      setSignedIn(!signedIn);
+      window.location.replace("http://localhost:3000/Login");
     } catch (error) {
       console.error(error);
     }

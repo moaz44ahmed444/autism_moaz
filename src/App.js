@@ -21,20 +21,19 @@ import Footer from "./Component/Footer";
 
 
 const App = () => {
-  const [signedIn, setSignedIn] = useState(true);
 
   const userId = '123'; // This could be the user's ID from the login page
   return (
     <BrowserRouter>
-      <Navbar signedIn={signedIn} />
+      <Navbar />
       <Routes>
         <Route exact path='/' element={<Index/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/Questionnaire' element={<Questionnaire/>} />
-        <Route path='/Login' element={<Login signedIn={signedIn} setSignedIn={setSignedIn}/>} />
-        <Route path='/SpecialistSignUpForm' element={<SpecialistSignUpForm signedIn={signedIn} setSignedIn={setSignedIn}/>} />
-        <Route path='/ParentSignUpForm' element={<ParentSignUpForm signedIn={signedIn} setSignedIn={setSignedIn}/>} />
-        <Route path='/PatientSignUpForm' element={<PatientSignUpForm signedIn={signedIn} setSignedIn={setSignedIn}/>} />
+        <Route path='/Login' element={<Login />} />
+        <Route path='/SpecialistSignUpForm' element={<SpecialistSignUpForm />} />
+        <Route path='/ParentSignUpForm' element={<ParentSignUpForm />} />
+        <Route path='/PatientSignUpForm' element={<PatientSignUpForm />} />
         <Route path='/MyAccount' element={<MyAccount userId={userId}/>} />
         <Route path='/EditSpecilaistProfile' element={<EditSpecilaistProfile/>} />
         <Route path='/EditParentProfile' element={<EditParentProfile/>} />
